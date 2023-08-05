@@ -1,6 +1,9 @@
-function App() {
+import CodeEditor from "./components/CodeEditor";
+
+const App = () => {
+
   return (
-    <div></div>
+    <CodeEditor/>
   );
 }
 

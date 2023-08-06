@@ -1,3 +1,8 @@
+//breakpoints
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1440px;
+
 //linux colors
 $red: #FF5F56;
 $yellow: #FFBD2E;
@@ -15,6 +20,7 @@ $hover-button: rgba(255, 255, 255, 0.24);
 
 //input color
 $input-color: rgba(255, 255, 255, 0.16);
+$input-hover-color: rgba(255, 255, 255, 0.24);
 
 //other colors
 $black: #141414;

@@ -45,9 +45,9 @@ table {
     border-spacing: 0;
 }
 button {
-    padding: 0;
     background-color: inherit;
     border: none;
+    padding: 0;
 }
 input, textarea {
     border: none;
@@ -67,6 +67,11 @@ input, textarea {
 body {
     background-color: $darkest-blue;
     padding: 16px;
+    width: 100%;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .subtitle {

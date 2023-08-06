@@ -1,0 +1,72 @@
+@import "styles/variables";
+
+//Standard Select CSS
+.select {
+    display: grid;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: $input-color;
+    border-radius: 8px;
+}
+
+.select:hover, .select:focus{
+    background-color: $input-hover-color;
+}
+
+.select span:hover {
+    background-color: transparent;
+}
+
+.border {
+    border: white solid 1px;
+}
+
+.options {
+    display: none;
+    &--active {
+        display: grid;
+    }
+}
+
+.option {
+    text-align: start;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.option:hover {
+    background-color: $input-hover-color;
+}
+
+
+
+//Select Editor Theme CSS
+.selectColor {
+    display: grid;
+    border-radius: 8px;
+    border: #FFFFFF solid 1px;
+    cursor: pointer;
+    padding: 8px;
+    min-height: 56px;
+}
+
+.colorOption {
+    border-radius: 8px;
+    height: 38.4px;
+    margin-bottom: 8px;
+}
+
+.colorOption:first-child {
+    margin-top: 8px;
+}
+
+.colorOption:last-child {
+    margin-bottom: 0;
+}
+
+.selectedColor {
+    border-radius: 8px;
+    height: 38.4px;
+}
+
+

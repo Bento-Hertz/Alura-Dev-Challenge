@@ -7,16 +7,15 @@
 
 .input {
     background-color: $input-color;
-    border-radius: 8px;
+    border-radius: 8px; 
     padding: 16px;
 }
 
-::placeholder {
-    color: rgba(255, 255, 255, 0.4);
+.input:hover, .input:focus {
+    background-color: $input-hover-color;
 }
 
 .codeContainer {
-    background-color: #6BD1FF;
     padding: 32px;
     border-radius: 8px;
 }
@@ -42,6 +41,12 @@
     }
 }
 
+.button {
+    border-radius: 8px;
+    text-align: center;
+    padding: 16px;
+}
+
 .inputHeader i {
     width: 12px;
     height: 12px;
@@ -57,11 +62,8 @@
     padding: 16px;
 }
 
-.highlightButton {
+.highlight {
     background-color: $transparent-dark-blue;
-    padding: 16px;
-    text-align: center;
-    border-radius: 8px;
 }
 
 .inputContainer {
@@ -69,18 +71,11 @@
     gap: 16px;
 }
 
-.colorInput {
-    height: 56px;
-    border: #FFFFFF solid 1px;
-    border-radius: 8px;
-    padding: 8px;
-    &__options {
-        display: none;
-        &--active {
-            display: grid;
-        }
-    }
+.submit {
+    background-color: $dark-blue;
+    color: black;
 }
+
 
 
 

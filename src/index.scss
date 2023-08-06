@@ -48,6 +48,7 @@ button {
     background-color: inherit;
     border: none;
     padding: 0;
+    cursor: pointer;
 }
 input, textarea {
     border: none;
@@ -67,7 +68,6 @@ input, textarea {
 body {
     background-color: $darkest-blue;
     padding: 16px;
-    width: 100%;
 }
 
 ::placeholder {

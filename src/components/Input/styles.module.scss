@@ -1,0 +1,11 @@
+@import 'styles/variables';
+
+.input {
+    background-color: $input-color;
+    border-radius: 8px; 
+    padding: 16px;
+}
+
+.input:hover, .input:focus {
+    background-color: $input-hover-color;
+}

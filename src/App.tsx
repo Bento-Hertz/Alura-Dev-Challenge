@@ -1,9 +1,13 @@
-import CodeEditor from "./components/CodeEditor";
+import CodeEditor from "components/CodeEditor";
+import Header from "components/Header";
 
 const App = () => {
 
   return (
-    <CodeEditor/>
+    <main>
+      <Header />
+      <CodeEditor />
+    </main>
   );
 }
 

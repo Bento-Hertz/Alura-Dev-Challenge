@@ -11,51 +11,9 @@
     align-self: start;
 }
 
-.codeContainer {
-    padding: 32px;
-    border-radius: 8px;
-    display: grid;
-}
-
-.codeHeader {
-    background-color: $black;
-    display: flex;
-    gap: 8px;
-    justify-content: start;
-    align-items: center;
-    padding: 16px;
-    padding-bottom: 8px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    &__red {
-        background-color: $red;
-    }
-    &__yellow {
-        background-color: $yellow;
-    }
-    &__green {
-        background-color: $green;
-    }
-}
-
-.codeHeader i {
-    width: 12px;
-    height: 12px;
-    border-radius: 99999px;
-}
-
 .button {
     border-radius: 8px;
     text-align: center;
-    padding: 16px;
-}
-
-.codeInput {
-    background-color: $black;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    width: 100%;
-    height: 302px;
     padding: 16px;
 }
 

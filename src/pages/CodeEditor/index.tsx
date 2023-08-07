@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import classNames from 'classnames';
 import { useState } from 'react';
 import Input from "components/Input";
+import CodeContainer from "components/CodeContainer";
 
 // interface Project {
 //     code: string;
@@ -14,11 +15,6 @@ import Input from "components/Input";
 
 const Form = () => {
 
-    const linuxColors = [
-        'codeHeader__red',
-        'codeHeader__yellow',
-        'codeHeader__green'
-    ];
     const languageOptions = [
         'Javascript',
         'Java',
@@ -53,14 +49,7 @@ const Form = () => {
     return (
         <form className={styles.form} onSubmit={onSave}>
             <section className={styles.sectionContainer}>
-                <div style={{backgroundColor: themeColor}} className={styles.codeContainer}>
-                    <div className={styles.codeHeader}>
-                        {linuxColors.map(color => (
-                            <i key={color} className={classNames({[styles[color]]: true})}></i>
-                        ))}
-                    </div>
-                    <textarea className={styles.codeInput} value={code} placeholder="//Coding..." required onChange={(value) => setCode(value.target.value)}/>
-                </div>
+                <CodeContainer isRequired={true} placeholder="//Coding..." value={code} themeColor={themeColor} whenChanged={(code) => setCode(code)}/>
                 <button type="button" className={classNames({
                     [styles.button]: true,
                     [styles.highlight]: true
@@ -69,12 +58,12 @@ const Form = () => {
 
             <section className={styles.sectionContainer}>
                 <div className={styles.inputContainer}>
-                    <h2 className="subtitle">YOUR PROJECT</h2>
+                    <h3 className="sidebarTitle">YOUR PROJECT</h3>
                     <Input value={name} type="text" placeholder="Name your project" isRequired={true} whenChanged={(name) => setName(name)}/>
                     <Input value={description} isTextarea={true} placeholder="Project description" whenChanged={(description) => setDescription(description)}/>
                 </div>
                 <div className={styles.inputContainer}>
-                    <h2 className="subtitle">CUSTOMIZATION</h2>
+                    <h3 className="sidebarTitle">CUSTOMIZATION</h3>
                     <div className={styles.selectContainer}>
                         <Select value={language} options={languageOptions} onSelect={(language) => setLanguage(language)}/>
                         <Select value={themeColor} type="selectColor" options={themeColors} onSelect={(color) => setThemeColor(color)}/>

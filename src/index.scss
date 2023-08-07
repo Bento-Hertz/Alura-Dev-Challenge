@@ -54,6 +54,9 @@ input, textarea {
     padding: 0;
     outline: none;
 }
+textarea {
+    resize: none;
+}
 a{
     text-decoration: none;
 }
@@ -69,12 +72,18 @@ a{
 
 body {
     background-color: $darkest-blue;
-    padding: 120.8px 32px 32px 32px;
+    padding: 120.8px 16px 16px 16px;
+}
+
+@media(min-width: $tablet) {
+    body {
+        padding: 120.8px 32px 32px 32px;
+    }
 }
 
 @media(min-width: $desktop) {
     body {
-        padding-left: 344px;
+        padding-left: 312px;
     }
 }
 
@@ -82,7 +91,13 @@ body {
     color: rgba(255, 255, 255, 0.4);
 }
 
-.subtitle {
+.title {
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: 700;
+}
+
+.sidebarTitle {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 4px;

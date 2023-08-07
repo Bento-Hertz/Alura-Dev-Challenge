@@ -1,0 +1,40 @@
+@import 'styles/variables';
+
+.codeContainer {
+    background-color: #00000029;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.details {
+    padding: 32px;
+    display: grid;
+    gap: 32px;
+}
+
+.projectSection {
+    display: grid;
+    gap: 8px;
+}
+
+.interactiveSection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.social div {
+    display: flex;
+    gap: 8px;
+}
+
+.profileInfo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

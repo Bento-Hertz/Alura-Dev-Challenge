@@ -9,7 +9,7 @@
     justify-content: space-between;
     width: 100%;
     height: 88.8px;
-    padding: 16px 32px;
+    padding: 16px;
     margin-left: 0;
     background-color: $darkest-blue;
     border-bottom: black solid 1px;
@@ -38,6 +38,7 @@
         display: grid;
         grid-template-columns: auto 1fr;
         gap: 40px;
+        padding: 16px 32px;
     }
 
     .nav {
@@ -53,8 +54,8 @@
 @media(min-width: $desktop) {
     .header {
         padding-left: 32px;
-        margin-left: 312px;
-        width: calc(100% - 312px);
+        margin-left: 280px;
+        width: calc(100% - 280px);
         grid-template-columns: 1fr;
     }
 

@@ -5,9 +5,16 @@
     gap: 32px;
 }
 
+.sectionContainer {
+    display: grid;
+    gap: 32px;
+    align-self: start;
+}
+
 .codeContainer {
     padding: 32px;
     border-radius: 8px;
+    display: grid;
 }
 
 .codeHeader {
@@ -48,7 +55,7 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     width: 100%;
-    height: 384px;
+    height: 302px;
     padding: 16px;
 }
 
@@ -66,12 +73,6 @@
     gap: 16px;
 }
 
-@media(min-width: $tablet) {
-    .selectContainer {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 .submit {
     background-color: $dark-blue;
     color: black;
@@ -79,6 +80,21 @@
 
 .submit:active {
     background-color: $action-button;
+}
+
+@media(min-width: $tablet) {
+    .selectContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(min-width: $desktop) {
+    .form {
+        grid-template-columns: 1fr 272px;
+    }
+    .selectContainer {
+        grid-template-columns: 1fr;
+    }
 }
 
 

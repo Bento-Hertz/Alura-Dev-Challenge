@@ -52,40 +52,40 @@ const Form = () => {
 
     return (
         <form className={styles.form} onSubmit={onSave}>
-
-            <div style={{backgroundColor: themeColor}} className={styles.codeContainer}>
-                <div className={styles.codeHeader}>
-                    {linuxColors.map(color => (
-                        <i key={color} className={classNames({[styles[color]]: true})}></i>
-                    ))}
+            <section className={styles.sectionContainer}>
+                <div style={{backgroundColor: themeColor}} className={styles.codeContainer}>
+                    <div className={styles.codeHeader}>
+                        {linuxColors.map(color => (
+                            <i key={color} className={classNames({[styles[color]]: true})}></i>
+                        ))}
+                    </div>
+                    <textarea className={styles.codeInput} value={code} placeholder="//Coding..." required onChange={(value) => setCode(value.target.value)}/>
                 </div>
-                <textarea className={styles.codeInput} value={code} required onChange={(value) => setCode(value.target.value)}/>
-            </div>
+                <button type="button" className={classNames({
+                    [styles.button]: true,
+                    [styles.highlight]: true
+                })}>Visualize with the highlight</button>      
+            </section>
 
-            <div className={classNames({
-                [styles.button]: true,
-                [styles.highlight]: true
-            })}>Visualize with the highlight</div>
-
-            <div className={styles.inputContainer}>
-                <h2 className="subtitle">YOUR PROJECT</h2>
-                <Input value={name} type="text" placeholder="Name your project" isRequired={true} whenChanged={(name) => setName(name)}/>
-                <Input value={description} isTextarea={true} placeholder="Project description" whenChanged={(description) => setDescription(description)}/>
-            </div>
-
-            <div className={styles.inputContainer}>
-                <h2 className="subtitle">CUSTOMIZATION</h2>
-                <div className={styles.selectContainer}>
-                    <Select value={language} options={languageOptions} onSelect={(language) => setLanguage(language)}/>
-                    <Select value={themeColor} type="selectColor" options={themeColors} onSelect={(color) => setThemeColor(color)}/>
+            <section className={styles.sectionContainer}>
+                <div className={styles.inputContainer}>
+                    <h2 className="subtitle">YOUR PROJECT</h2>
+                    <Input value={name} type="text" placeholder="Name your project" isRequired={true} whenChanged={(name) => setName(name)}/>
+                    <Input value={description} isTextarea={true} placeholder="Project description" whenChanged={(description) => setDescription(description)}/>
                 </div>
-                
-            </div>
-
-            <button className={classNames({
-                [styles.button]: true,
-                [styles.submit]: true
-            })}>Save project</button>
+                <div className={styles.inputContainer}>
+                    <h2 className="subtitle">CUSTOMIZATION</h2>
+                    <div className={styles.selectContainer}>
+                        <Select value={language} options={languageOptions} onSelect={(language) => setLanguage(language)}/>
+                        <Select value={themeColor} type="selectColor" options={themeColors} onSelect={(color) => setThemeColor(color)}/>
+                    </div>
+                    
+                </div>
+                <button className={classNames({
+                    [styles.button]: true,
+                    [styles.submit]: true
+                })} type="submit">Save project</button>
+            </section>
         </form>
     ); 
 }

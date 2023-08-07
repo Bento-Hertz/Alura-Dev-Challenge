@@ -18,7 +18,7 @@ const Select = (props: Props) => {
     const isColorSelector = type === 'selectColor';
 
     return (
-        <div
+        <button
             className={classNames({
                 [styles.select]: !isColorSelector,
                 [styles[`select--active`]]: !isColorSelector && open,
@@ -27,6 +27,7 @@ const Select = (props: Props) => {
             })}
             onClick={() => setOpen(!open)}
             onBlur={() => setOpen(false)}
+            type="button"
         >
             <span style={isColorSelector ? {backgroundColor: value} : {}} className={classNames({
                 [styles.selectedOption]: !isColorSelector,
@@ -56,7 +57,7 @@ const Select = (props: Props) => {
                     return <div style={index===0 && isColorSelector ? {height: '8px'} : {}} key={option}></div>
                 })}
             </div>
-        </div>
+        </button>
     );
 }
 

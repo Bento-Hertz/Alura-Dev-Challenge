@@ -18,7 +18,6 @@ time, mark, audio, video {
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -55,6 +54,9 @@ input, textarea {
     padding: 0;
     outline: none;
 }
+a{
+    text-decoration: none;
+}
 
 * {
     box-sizing: border-box;
@@ -67,7 +69,13 @@ input, textarea {
 
 body {
     background-color: $darkest-blue;
-    padding: 16px;
+    padding: 120.8px 32px 32px 32px;
+}
+
+@media(min-width: $desktop) {
+    body {
+        padding-left: 344px;
+    }
 }
 
 ::placeholder {

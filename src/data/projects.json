@@ -1,0 +1,9 @@
+[
+    {
+        "code": "function helloWorld( ) { console.log('Hello World!') }",
+        "name": "Hello World in Javascript",
+        "description": "This is a quick tutorial showing how to create a function that sends a message to the browser's console.",
+        "language": "Javascript",
+        "themeColor": "#6BD1FF"
+    }
+]

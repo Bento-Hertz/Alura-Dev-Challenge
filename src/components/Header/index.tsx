@@ -21,7 +21,7 @@ const Header = () => {
 
                 <div className={styles.profileIcon}>
                     <img src={profileIcon} alt="profile"/>
-                    <span>Harry</span>
+                    <span>Bento</span>
                 </div>
             </nav>
         </header>

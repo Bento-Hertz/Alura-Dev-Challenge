@@ -1,19 +1,12 @@
-import Select from "components/Select";
+import Select from "pages/CodeEditor/Select";
 import styles from "./styles.module.scss";
 import classNames from 'classnames';
 import { useState } from 'react';
 import Input from "components/Input";
-import CodeContainer from "components/CodeContainer";
+import CodeInput from "components/CodeInput";
+import projects from "data/projects.json";
 
-// interface Project {
-//     code: string;
-//     name: string;
-//     description: string;
-//     language: string;
-//     color: string;
-// }
-
-const Form = () => {
+const CodeEditor = () => {
 
     const languageOptions = [
         'Javascript',
@@ -39,6 +32,8 @@ const Form = () => {
 
     function onSave(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
+        const newProject = {code, name, description, language, themeColor};
+        projects.push(newProject);
         setCode('');
         setName('');
         setDescription('');
@@ -49,7 +44,7 @@ const Form = () => {
     return (
         <form className={styles.form} onSubmit={onSave}>
             <section className={styles.sectionContainer}>
-                <CodeContainer isRequired={true} placeholder="//Coding..." value={code} themeColor={themeColor} whenChanged={(code) => setCode(code)}/>
+                <CodeInput isRequired={true} value={code} themeColor={themeColor} whenChanged={(code) => setCode(code)}/>
                 <button type="button" className={classNames({
                     [styles.button]: true,
                     [styles.highlight]: true
@@ -79,4 +74,4 @@ const Form = () => {
     ); 
 }
 
-export default Form;
+export default CodeEditor;

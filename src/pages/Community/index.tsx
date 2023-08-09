@@ -1,21 +1,15 @@
-import ProjectContainer from "components/ProjectContainer";
+import Project from "pages/Community/Project";
 import styles from "./styles.module.scss";
+import projects from "data/projects.json";
 
 const Community = () => {
 
-    const projects = [
-        '1',
-        '2',
-        '3',
-        '4'
-    ]
-
     return (
-        <main className={styles.container}>
-            {projects.map((project) => (
-                <ProjectContainer key={project}/>
+        <ul className={styles.container}>
+            {projects.map((project, index) => (
+                <Project project={project} key={index}/>
             ))}
-        </main>
+        </ul>
     );
 }
 

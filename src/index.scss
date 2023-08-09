@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     line-height: 1;
 }
-ol, ul {
+ol, ul, li {
     list-style: none;
 }
 blockquote, q {
@@ -73,16 +73,10 @@ a{
 body {
     background-color: $darkest-blue;
     padding: 120.8px 16px 16px 16px;
-}
-
-@media(min-width: $tablet) {
-    body {
+    @media(min-width: $tablet) {
         padding: 120.8px 32px 32px 32px;
     }
-}
-
-@media(min-width: $desktop) {
-    body {
+    @media(min-width: $desktop) {
         padding-left: 312px;
     }
 }

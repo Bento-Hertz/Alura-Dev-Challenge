@@ -1,18 +1,26 @@
 import styles from "./styles.module.scss";
-import CodeContainer from "components/CodeContainer";
+import CodeInput from "components/CodeInput";
 import profileIcon from "assets/profile-icon.png";
 import commentsIcon from "assets/comments.svg";
 import likesIcon from "assets/likes.svg";
+import { IProject } from "shared/interfaces/IProject";
 
-const ProjectContainer = () => {
+interface Props {
+    project: IProject;
+}
+
+const Project = (props: Props) => {
+
+    const {project} = props;
+
     return(
-        <div className={styles.codeContainer}>
-            <CodeContainer value="function typescript(){return 0;}" themeColor="#6BD1FF"/>
+        <li className={styles.codeContainer}>
+            <CodeInput value={project.code} themeColor={project.themeColor}/>
 
             <div className={styles.details}>
                 <section className={styles.projectSection}>
-                    <h2 className="title">Project Title</h2>
-                    <p>This is the description of the project</p>
+                    <h2 className="title">{project.name}</h2>
+                    <p>{project.description}</p>
                 </section>
                 <section className={styles.interactiveSection}>
                     <div className={styles.social}>
@@ -27,12 +35,12 @@ const ProjectContainer = () => {
                     </div>
                     <div className={styles.profileInfo}>
                         <img src={profileIcon} alt="like icon" />
-                        <span>@Harry</span>
+                        <span>@Bento</span>
                     </div>
                 </section>
             </div>
-        </div>
+        </li>
     );
 }
 
-export default ProjectContainer;
+export default Project;

@@ -2,6 +2,7 @@ import styles from "./styles.module.scss";
 import logo from "assets/logo.svg";
 import tagIcon from "assets/tag.svg";
 import communityIcon from "assets/community.svg";
+import SidebarLink from "./SidebarLink";
 
 const Sidebar = () => {
     return(
@@ -11,20 +12,10 @@ const Sidebar = () => {
             </header>
 
             <h3 className="sidebarTitle">MENU</h3>
-            <section className={styles.sidebarMenu}>
-                <a className={styles.link} href="typescript:void(0)">
-                    <div className={styles.iconContainer}>
-                        <img src={tagIcon} alt="code editor icon"/>
-                    </div>
-                    <span>Code Editor</span>
-                </a>
-                <a className={styles.link} href="typescript:void(0)">
-                    <div className={styles.iconContainer}>
-                        <img src={communityIcon} alt="community icon" />
-                    </div>
-                    <span>Community</span>
-                </a>
-            </section>
+            <div className={styles.sidebarMenu}>
+                <SidebarLink path="/" label="Community" alt="community icon" icon={communityIcon}/>
+                <SidebarLink path="/code-editor" label="Code Editor" alt="code editor icon" icon={tagIcon}/>
+            </div>
         </div>
     );
 }

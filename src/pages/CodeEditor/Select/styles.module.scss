@@ -6,8 +6,8 @@
     display: grid;
     position: relative;
     border-radius: 8px;
-    background-color: $input-color;
-    border: $input-color solid 1px;
+    background-color: $gray-016;
+    border: $gray-016 solid 1px;
     &--active {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -16,7 +16,7 @@
 }
 
 .select:hover, .select:focus{
-    background-color: $input-hover-color;
+    background-color: $gray-024;
 }
 
 .select span:hover {
@@ -53,11 +53,11 @@
 .option {
     text-align: start;
     padding: 16px;
-    background-color: $input-hover-color;
+    background-color: $gray-024;
 }
 
 .option:hover {
-    background-color: $option-hover-color;
+    background-color: $gray-032;
 }
 
 

@@ -33,11 +33,11 @@
 
 .submit {
     background-color: $dark-blue;
-    color: black;
+    color: $black;
 }
 
 .submit:active {
-    background-color: $action-button;
+    background-color: $strong-blue;
 }
 
 @media(min-width: $tablet) {

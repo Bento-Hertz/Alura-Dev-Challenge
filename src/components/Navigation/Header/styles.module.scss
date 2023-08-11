@@ -17,16 +17,22 @@
 
 .nav {
     display: flex;
-    align-items: center;
 }
 
 .nav img {
     padding: 16px;
 }
 
-.menuIcon {
+.sidebarToggle {
     margin-left: 24px;
     justify-self: end;
+    display: flex;
+    align-items: center;
+}
+
+.searchButton {
+    display: flex;
+    align-items: center;
 }
 
 .profileIcon {
@@ -46,7 +52,7 @@
         grid-template-columns: 1fr auto;
     }
     
-    .searchIcon {
+    .searchButton {
         display: none;
     }
 }
@@ -68,7 +74,7 @@
         display: none;
     }
 
-    .menuIcon {
+    .sidebarToggle {
         display: none;
     }
 

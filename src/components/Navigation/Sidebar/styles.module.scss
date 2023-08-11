@@ -1,0 +1,75 @@
+@import "styles/variables";
+
+.sidebar {
+    display: none;
+    grid-template-columns: 1fr 280px;
+    justify-content: end;
+    position: fixed;
+    top: 88.8px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    border-right: black solid 1px;
+    z-index: 2;
+    &--active {
+        display: grid;
+    }
+}
+
+.darkestBlueBackground {
+    display: grid;
+    background-color: $darkest-blue;
+    border-radius: 8px;
+    margin: 12px 12px 0 0;
+}
+    
+.sidebarMenu {
+    display: grid;
+    align-content: start;
+    gap: 16px;
+    padding: 32px;
+    background-color: $gray-016;
+    border-radius: 8px;
+}
+
+.sidebarMenu ul {
+    display: grid;
+    gap: 16px;
+}
+
+.sidebarHeader {
+    display: none;
+    position: absolute;
+    width: calc(100% + 2px);
+    height: 88.8px;
+    align-items: center;
+    border-bottom: black solid 1px;
+    padding: 32px;
+    background-color: $darkest-blue;
+}
+
+@media(min-width: $desktop) {
+    .sidebar {
+        display: grid;
+        justify-content: stretch;
+        top: 0;
+        background-color: $transparent-dark-blue;
+        border-radius: 0;
+        padding-top: 88.8px;
+        width: 280px;
+    }
+
+    .darkestBlueBackground {
+        background-color: transparent;
+    }
+
+    .sidebarMenu {
+        background-color: transparent;
+        border-radius: 0;
+        width: 100%;
+    }
+    
+    .sidebarHeader {
+        display: flex;
+    }
+}

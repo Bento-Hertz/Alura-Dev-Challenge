@@ -1,14 +1,14 @@
 @import 'styles/variables';
 
 .input {
-    background-color: $input-color;
+    background-color: $gray-016;
     border-radius: 8px; 
     padding: 16px;
     width: 100%;
 }
 
 .input:hover, .input:focus {
-    background-color: $input-hover-color;
+    background-color: $gray-024;
 }
 
 @media(max-width: $tablet) {

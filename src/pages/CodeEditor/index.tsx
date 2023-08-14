@@ -32,8 +32,8 @@ const CodeEditor = () => {
 
     function onSave(event: React.FormEvent<HTMLFormElement>) {
         event.preventDefault();
-        const newProject = {code, name, description, language, themeColor};
-        projects.push(newProject);
+        projects.push({code, name, description, language, themeColor});
+        
         setCode('');
         setName('');
         setDescription('');

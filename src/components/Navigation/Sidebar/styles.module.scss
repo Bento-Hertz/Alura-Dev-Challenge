@@ -2,13 +2,13 @@
 
 .sidebar {
     display: none;
-    grid-template-columns: 1fr 280px;
+    grid-template-columns: 1fr 254px;
     justify-content: end;
     position: fixed;
     top: 88.8px;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 88.8px);
     border-right: black solid 1px;
     z-index: 2;
     &--active {
@@ -20,7 +20,7 @@
     display: grid;
     background-color: $darkest-blue;
     border-radius: 8px;
-    margin: 12px 12px 0 0;
+    margin: 12px 12px 12px 0;
 }
     
 .sidebarMenu {
@@ -51,16 +51,23 @@
 @media(min-width: $desktop) {
     .sidebar {
         display: grid;
-        justify-content: stretch;
+        grid-template-columns: 1fr;
         top: 0;
         background-color: $transparent-dark-blue;
         border-radius: 0;
         padding-top: 88.8px;
         width: 280px;
+        height: 100vh;
+    }
+
+    .disableSidebarArea {
+        display: none;
     }
 
     .darkestBlueBackground {
         background-color: transparent;
+        border-radius: 0;
+        margin: 0;
     }
 
     .sidebarMenu {

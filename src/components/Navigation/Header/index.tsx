@@ -1,6 +1,7 @@
 import searchIcon from "assets/search-icon.svg";
 import logo from "assets/logo.svg";
 import menuIcon from "assets/menu-icon.svg";
+import xIcon from "assets/x.svg";
 import profileIcon from "assets/profile-icon.png";
 import styles from "./styles.module.scss";
 import Input from "components/Input";   
@@ -8,12 +9,12 @@ import { useState } from "react";
 
 interface Props {
     activeSidebar: boolean;
-    onToggleSidebar: (toggleSidebar: boolean) => void;
+    toggleSidebar: () => void;
 }
 
 const Header = (props: Props) => {
 
-    const {activeSidebar, onToggleSidebar} = props;
+    const {activeSidebar, toggleSidebar} = props;
 
     const [search, setSearch] = useState('');
 
@@ -26,8 +27,8 @@ const Header = (props: Props) => {
                 </button>
                 <Input isSearchBar={true} type="text" placeholder="Search" value={search} whenChanged={(search)=> setSearch(search)}/>
                 
-                <button onClick={() => onToggleSidebar(!activeSidebar)} className={styles.sidebarToggle}>
-                    <img src={menuIcon} alt="menu"/>
+                <button onClick={() => toggleSidebar()} className={styles.sidebarToggle}>
+                    { !activeSidebar ? <img src={menuIcon} alt="menu"/> : <img src={xIcon} alt="menu"/> }
                 </button>
 
                 <div className={styles.profileIcon}>

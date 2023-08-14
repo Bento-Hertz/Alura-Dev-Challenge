@@ -9,7 +9,7 @@ const Navigation = () => {
     return (
         <>
             <Sidebar activeSidebar={activeSidebar} disableSidebar={() => setActiveSidebar(false)}/>
-            <Header activeSidebar={activeSidebar} onToggleSidebar={(toggle) => setActiveSidebar(toggle)}/>
+            <Header activeSidebar={activeSidebar} toggleSidebar={() => setActiveSidebar(!activeSidebar)}/>
         </>
     );
 } 
